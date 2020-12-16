@@ -25,6 +25,16 @@ public class MotorCarretera : MonoBehaviour{
     public bool salioDePantalla;
     public Camera camara;
 
+    public GameObject autoGO;
+    public AudioFX audioFx;
+    public GameObject bgFinalGO;
+
+    public void FinalizarJuego() {
+        autoGO.GetComponent<AudioSource>().Stop();
+        audioFx.SonidoFXMusica();
+        bgFinalGO.SetActive(true);
+    }
+
     void Start() {
         iniciarJuego();
     }
@@ -32,6 +42,11 @@ public class MotorCarretera : MonoBehaviour{
     void iniciarJuego(){
         contenedorCallesGO = GameObject.Find("ContenedorCalles");//nombre
         camara = GameObject.Find("MainCamera").GetComponent<Camera>();
+
+        autoGO = GameObject.Find("Auto");
+        audioFx = GameObject.FindObjectOfType<AudioFX>().gameObject.GetComponent<AudioFX>();
+        bgFinalGO = GameObject.Find("PanelGameOver");
+        bgFinalGO.SetActive(false);
 
         initVelocidadCarretera();
         medirPantalla();

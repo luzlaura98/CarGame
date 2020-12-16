@@ -63,6 +63,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AudioFX.cs" />
+    <Compile Include="Assets\Scripts\Auto.cs" />
+    <Compile Include="Assets\Scripts\AutoObstaculo.cs" />
+    <Compile Include="Assets\Scripts\ControladorCoche.cs" />
+    <Compile Include="Assets\Scripts\Cronometro.cs" />
+    <Compile Include="Assets\Scripts\Fundidos.cs" />
+    <Compile Include="Assets\Scripts\InicioCuenta.cs" />
     <Compile Include="Assets\Scripts\MotorCarretera.cs" />
     <Compile Include="Assets\Scripts\Pieza.cs" />
     <Reference Include="Unity.Timeline.Editor">
